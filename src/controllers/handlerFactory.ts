@@ -69,6 +69,7 @@ export const getOne = <T extends Document>(
 
 export const getAll = <T extends Document>(Model: Model<T>) =>
   catchAsync(async (req: Request, res: Response) => {
+    // EXECUTE QUERY
     let message: string;
     if (req.query.searchTerm) {
       message = `${Model.modelName}s matching search term '${req.query.searchTerm}' fetched successfully!`;
