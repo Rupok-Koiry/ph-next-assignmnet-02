@@ -78,6 +78,7 @@ export const getAll = <T extends Document>(Model: Model<T>) =>
     } else {
       message = `${Model.modelName}s fetched successfully!`;
     }
+    // APi features
     const features = new APIFeatures(Model.find(), req.query)
       .filter()
       .sort()
