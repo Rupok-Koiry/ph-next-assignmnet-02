@@ -24,9 +24,7 @@ app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
 
 // Handle all undefined routes
-app.all('*', (req, res, next) => {
-  next(new AppError(`Route not found`, 404));
-});
+
 
 // Global error handling middleware
 app.use(globalErrorHandler);
