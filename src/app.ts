@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(cookieParser());
 
-// Route handlers
+// Route handlers for products and orders
 app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
 
