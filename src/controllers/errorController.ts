@@ -17,6 +17,7 @@ const globalErrorHandler = (
   // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
   next: NextFunction,
 ): void => {
+  // Set default error status code and status
   err.statusCode = err.statusCode || 500;
   err.status = err.status || 'error';
 
